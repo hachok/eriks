@@ -1,7 +1,7 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
 import * as productsActions from 'src/actions/products.actions';
 import { loadProducts } from 'src/services/products.service';
-import {IProductResponse} from 'src/types/products.types';
+import { IProductResponse } from 'src/types/products.types';
 
 export function* loadProductsSaga(): Generator {
   try {

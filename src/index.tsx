@@ -5,8 +5,8 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import history from 'src/utils/history';
 import { Router } from 'react-router-dom';
-import store, {sagaMiddleware} from 'src/store';
-import {rootSaga} from 'src/sagas';
+import store, { sagaMiddleware } from 'src/store';
+import { rootSaga } from 'src/sagas';
 
 // then run the saga
 sagaMiddleware.run(rootSaga);
