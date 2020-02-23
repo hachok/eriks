@@ -12,7 +12,7 @@ export const productsReducer = (
 ): IProduct[] => {
   switch (action.type) {
     case getType(productsActions.loadProductsAsync.success):
-      return { ...state, ...action.payload };
+      return action.payload.products;
     default:
       return state;
   }
