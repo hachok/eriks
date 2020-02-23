@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import { ColorType } from 'src/types/styles.types';
-import styled from 'src/styles/index';
+import styled from 'src/styles';
 
 interface ComponentProps {
   children: ReactNode;

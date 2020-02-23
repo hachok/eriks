@@ -21,58 +21,51 @@ export const colors: ColorsType = {
   green: '#3fc1c9',
   black: '#000000',
   grey: '#485f78',
-  'light-grey': '#f6f7fc',
-  'light-mid-grey': '#d8d8d8',
-  'light-pink': '#f3f4f8',
-  'light-blue': '#e1e5eb',
-  'light-grey-blue': '#e1e5eb',
-  'deep-sky-blue': '#0084ff',
-  'dark-white': '#96aac3',
+  lightGrey: '#d8d8d8',
+  lightMidGrey: '#d8d8d8',
+  lightPink: '#f3f4f8',
+  lightBlue: '#e1e5eb',
+  lightGreyBlue: '#e1e5eb',
+  deepSkyBlue: '#0084ff',
+  darkWhite: '#96aac3',
 };
 
 const breakpoints: ReadonlyArray<string> = ['31.25em', '43.75em', '46.875em'];
 
+const space = ['0', '4px', '8px', '16px', '24px', '32px', '40px'];
+
 export const fontSizes: FontSizes = {
   xxl: `
-      font-size: 1.2rem;
+      font-size: 1.6rem;
     `,
   xl: `
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     `,
   l: `
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-
-      @media screen and (min-width: ${media['tablet']}px) {
-        font-size: 1.8rem;
-        line-height: 2.8rem;
-      }
+      font-size: 1.2rem;
     `,
   m: `
       font-size: 1.0625rem;
     `,
   s: `
-      font-size: 1.3rem;
-      line-height: 2.4rem;
-
-      @media screen and (min-width: ${media['tablet']}px) {
-        line-height: 2.8rem;
-      }
+      font-size: 1rem;
     `,
   xs: `
-      font-size: 1.2rem;
+      font-size: 0.8rem;
     `,
 };
 
 export interface IStyleClosetTheme {
   breakpoints: ReadonlyArray<string>;
   fontSizes: FontSizes;
+  space: string[];
   colors: { [key in keyof typeof colors]: string };
 }
 
 const theme: IStyleClosetTheme = {
   breakpoints,
   fontSizes,
+  space,
   colors,
 };
 

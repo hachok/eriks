@@ -7,13 +7,13 @@ export type ColorType =
   | 'green'
   | 'black'
   | 'grey'
-  | 'light-pink'
-  | 'light-blue'
-  | 'light-grey'
-  | 'light-mid-grey'
-  | 'light-grey-blue'
-  | 'deep-sky-blue'
-  | 'dark-white';
+  | 'lightPink'
+  | 'lightBlue'
+  | 'lightGrey'
+  | 'lightMidGrey'
+  | 'lightGreyBlue'
+  | 'deepSkyBlue'
+  | 'darkWhite';
 
 export type ColorsType = { [K in ColorType]: string };
 
@@ -41,6 +41,8 @@ export type IconType = 'shop';
 export type FontsStyle = 'normal' | 'italic';
 
 export type TextTypes = 'a' | 'p' | 'b' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+export type BlockTypes = 'span' | 'div';
 
 export type SpaceTitles = 'p' | 'pt' | 'pb' | 'pl' | 'pr' | 'm' | 'mt' | 'mb' | 'ml' | 'mr';
 

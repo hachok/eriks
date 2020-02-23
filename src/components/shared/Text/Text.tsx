@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import styled from 'src/styles/index';
+import styled from 'src/styles';
 import { ColorType, FontSizes, TextTypes } from 'src/types/styles.types';
 import { getFont, getFontSize } from 'src/styles/fonts';
 import { FontsType, FontsStyle } from 'src/types/styles.types';

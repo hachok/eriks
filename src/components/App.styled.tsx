@@ -1,6 +1,7 @@
 // global styles with types
 import { createGlobalStyle } from 'src/styles';
 import fontURL from 'src/styles/fonts/geomanist-regular-webfont.woff2';
+import styled from 'src/styles';
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -11,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
   
   html, body, #root, #root>div {
   height: 100%;
-  margin: 0;
 }
 
 body {
@@ -22,4 +22,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+`;
+
+export const Layout = styled.div`
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+`;
+
+export const Container = styled.section`
+  display: flex;
+  width: 100%;
+  border-top: 1px solid ${(props) => props.theme.colors.lightGrey};
+  border-bottom: 3px solid ${(props) => props.theme.colors.blue};
 `;
