@@ -1,85 +1,78 @@
 // JS reimplementation of Style Closet scales for use in styled-components
 
-export const colors = {
-  blue: '#2179ee',
-  green: '#00cc9a',
-  coral: '#ff6759',
-  gold: '#f0b95b',
-  purple: '#7537ef',
-  white: '#ffffff',
-  black: '#000000',
+import { ColorsType, FontSizes } from 'src/types/styles.types';
 
-  grey10: '#f3f4f8',
-  grey20: '#e1e5eb',
-  grey30: '#c2c6cc',
-  grey40: '#9ea2a8',
-  grey50: '#686c73',
-  grey60: '#30363d',
+export const SIZE_NUMBER = 8;
 
-  blue10: '#ade7ff',
-  blue20: '#61bcff',
-  blue30: '#2179ee',
-  blue40: '#1f4ab4',
-  blue50: '#1d2064',
-  green10: '#b5ffcb',
-  green20: '#5dffa3',
-  green30: '#00cc9a',
-  green40: '#219a8a',
-  green50: '#183f51',
-  purple10: '#dec7ff',
-  purple20: '#a673ff',
-  purple30: '#7537ef',
-  purple40: '#4e23b6',
-  purple50: '#2d1b64',
-  coral10: '#ffc6b3',
-  coral20: '#ff8e75',
-  coral30: '#ff6759',
-  coral40: '#eb312a',
-  coral50: '#7b1e30',
-  gold10: '#ffedc2',
-  gold20: '#ffda8b',
-  gold30: '#f0b95b',
-  gold40: '#e5a229',
-  gold50: '#6a4a24',
+export const media = {
+  mobile: 320,
+  tablet: 769,
+  laptop: 1025,
+  desktop: 1280,
+  desktopWide: 1360,
 };
 
-const breakpoints = ['31.25em', '43.75em', '46.875em'];
-const fontSizes = [
-  '1.2rem',
-  '1.4rem',
-  '1.6rem',
-  '1.8rem',
-  '2.4rem',
-  '2.8rem',
-  '3.2rem',
-  '4.0rem',
-  '4.8rem',
-  '6.4rem',
-];
-const space = [
-  '0',
-  '.4rem',
-  '.8rem',
-  '1.2rem',
-  '1.6rem',
-  '2.0rem',
-  '3.2rem',
-  '4.8rem',
-  '6.4rem',
-  '9.6rem',
-];
+export const colors: ColorsType = {
+  white: '#ffffff',
+  dark: '#1E2832',
+  dusk: '#00cc9a',
+  pink: '#fc5185',
+  blue: '#005ca9',
+  green: '#3fc1c9',
+  black: '#000000',
+  grey: '#485f78',
+  'light-grey': '#f6f7fc',
+  'light-mid-grey': '#d8d8d8',
+  'light-pink': '#f3f4f8',
+  'light-blue': '#e1e5eb',
+  'light-grey-blue': '#e1e5eb',
+  'deep-sky-blue': '#0084ff',
+  'dark-white': '#96aac3',
+};
+
+const breakpoints: ReadonlyArray<string> = ['31.25em', '43.75em', '46.875em'];
+
+export const fontSizes: FontSizes = {
+  xxl: `
+      font-size: 1.2rem;
+    `,
+  xl: `
+      font-size: 1.2rem;
+    `,
+  l: `
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+
+      @media screen and (min-width: ${media['tablet']}px) {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+      }
+    `,
+  m: `
+      font-size: 1.0625rem;
+    `,
+  s: `
+      font-size: 1.3rem;
+      line-height: 2.4rem;
+
+      @media screen and (min-width: ${media['tablet']}px) {
+        line-height: 2.8rem;
+      }
+    `,
+  xs: `
+      font-size: 1.2rem;
+    `,
+};
 
 export interface IStyleClosetTheme {
-  breakpoints: string[];
-  fontSizes: string[];
-  space: string[];
+  breakpoints: ReadonlyArray<string>;
+  fontSizes: FontSizes;
   colors: { [key in keyof typeof colors]: string };
 }
 
 const theme: IStyleClosetTheme = {
   breakpoints,
   fontSizes,
-  space,
   colors,
 };
 
