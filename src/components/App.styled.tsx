@@ -35,4 +35,11 @@ export const Container = styled.section`
   width: 100%;
   border-top: 1px solid ${(props) => props.theme.colors.lightGrey};
   border-bottom: 3px solid ${(props) => props.theme.colors.blue};
+  padding-bottom: ${(props) => props.theme.space[3]};
+  justify-content: stretch;
+`;
+
+export const Separator = styled.hr`
+  color: ${(props) => props.theme.colors.lightGrey};
+  margin: ${(props) => props.theme.space[3]} 0;
 `;
