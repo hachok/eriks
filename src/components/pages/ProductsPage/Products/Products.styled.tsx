@@ -5,4 +5,5 @@ export const ProductWrapper = styled.div`
   padding-top: ${(props) => `${props.theme.space[4]}`};
   width: 100%;
   justify-content: stretch;
+  overflow-x: auto;
 `;
