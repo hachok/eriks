@@ -64,3 +64,7 @@ export interface IProduct {
   id: string;
   isHide: boolean;
 }
+
+export interface IPoductId {
+  id: string;
+}

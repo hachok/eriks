@@ -7,12 +7,19 @@ import {
   FilterRow,
   FilterWrapper,
 } from 'src/components/pages/ProductsPage/Sidebar/Filter/Filter.styled';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from 'src/selectors/products.selectors';
 import { ProductRow } from 'src/components/pages/ProductsPage/Products/ProductItem/ProductItem.styled';
+import { toggleProduct } from 'src/actions/products.actions';
 
 const Filter = () => {
   const products = useSelector(getProducts);
+  const dispatch = useDispatch();
+
+  const onCheckboxChange = (id: string) => {
+    dispatch(toggleProduct({ id }));
+  };
+
   return (
     <FilterWrapper>
       <FilterItemTop>
@@ -20,7 +27,11 @@ const Filter = () => {
           {!!products.length &&
             products.map((product) => (
               <FilterRow key={product.id}>
-                <input type="checkbox" checked={true} />
+                <input
+                  type="checkbox"
+                  onChange={() => onCheckboxChange(product.id)}
+                  checked={product.display}
+                />
                 <Space ml={1}>
                   <Text size="xs" fontWeight="600">
                     {product.name}
@@ -31,14 +42,16 @@ const Filter = () => {
         </Space>
       </FilterItemTop>
       <FilterItemBottom>
-        <ProductRow>Ken1</ProductRow>
-        <ProductRow>Ken</ProductRow>
-        <ProductRow>Ken</ProductRow>
-        <ProductRow>Ken</ProductRow>
-        <ProductRow>Ken</ProductRow>
-        <ProductRow>Ken</ProductRow>
-        <ProductRow>Ken</ProductRow>
-        <ProductRow>Ken</ProductRow>
+        <Space mt={2}>
+          <ProductRow>Ken1</ProductRow>
+          <ProductRow>Ken</ProductRow>
+          <ProductRow>Ken</ProductRow>
+          <ProductRow>Ken</ProductRow>
+          <ProductRow>Ken</ProductRow>
+          <ProductRow>Ken</ProductRow>
+          <ProductRow>Ken</ProductRow>
+          <ProductRow>Ken</ProductRow>
+        </Space>
       </FilterItemBottom>
     </FilterWrapper>
   );

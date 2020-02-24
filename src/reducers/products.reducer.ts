@@ -14,10 +14,21 @@ const loadProducts = (products: IProductServer[]) => {
   });
 };
 
+const toggleProduct = (id: string, state) => {
+  return state.map((product) => {
+    if (product.id === id) {
+      return { ...product, display: !product.display };
+    }
+    return product;
+  });
+};
+
 export const productsReducer = (state = initialState, action: Action): IProduct[] => {
   switch (action.type) {
     case getType(productsActions.loadProductsAsync.success):
       return loadProducts(action.payload.products);
+    case getType(productsActions.toggleProduct):
+      return toggleProduct(action.payload.id, state);
     default:
       return state;
   }
