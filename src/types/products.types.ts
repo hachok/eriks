@@ -62,7 +62,14 @@ export interface IProduct {
   'Inwendige diameter': string;
   'Maat volgens AS568': string;
   id: string;
-  isHide: boolean;
+  features: IFeature[];
+}
+
+export interface IFeature {
+  id: string;
+  value: string;
+  title: string;
+  isHighLighted;
 }
 
 export interface IPoductId {

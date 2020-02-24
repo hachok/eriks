@@ -40,16 +40,15 @@ const ProductItem = ({ product }: Props) => {
           </Text>
           <Separator />
         </Space>
-        <ProductRow>
-          <ProductBadges badges={product.badges} />
-        </ProductRow>
-        <ProductRow>{product.Materiaal}</ProductRow>
-        <ProductRow>{product.Hardheid}</ProductRow>
-        <ProductRow>{product['Inwendige diameter']}</ProductRow>
-        <ProductRow>{product.Snoerdikte}</ProductRow>
-        <ProductRow>{product['Maat volgens AS568']}</ProductRow>
-        <ProductRow>{product.Toepassing}</ProductRow>
-        <ProductRow>{product.Temperatuurgebied}</ProductRow>
+        {product.badges && (
+          <ProductRow>
+            <ProductBadges badges={product.badges} />
+          </ProductRow>
+        )}
+        {product.features &&
+          product.features.map((feature) => (
+            <ProductRow isHighLighted={feature.isHighLighted}>{feature.value}</ProductRow>
+          ))}
       </ProductItemBottom>
     </ProductItemWrapper>
   );
