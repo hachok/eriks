@@ -2,6 +2,10 @@
 
 The compare page with the possibility to show/hide, remove products.
 
+## Demo
+
+https://eriks-digital.herokuapp.com/
+
 ## Installation
 
 In the project directory, you can run:
@@ -40,8 +44,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Technologies
 
-- React 16.12
-- Typescript 3.7.2
-- Redux(redux-saga) 4.0.5
-- Reselect 4.0.0
-- Styled-components 5.0.1
+- react 16.12
+- react-router-dom 5.1.2
+- typescript 3.7.2
+- redux(redux-saga) 4.0.5
+- reselect 4.0.0
+- styled-components 5.0.1
