@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from 'src/selectors/products.selectors';
 import { ProductRow } from 'src/components/pages/ProductsPage/Products/ProductItem/ProductItem.styled';
 import { toggleProduct } from 'src/actions/products.actions';
+import ProductFeatureTitle from 'src/components/pages/ProductsPage/Products/ProductItem/ProductFeatureTitle/ProductFeatureTitle';
 
 const Filter = () => {
   const products = useSelector(getProducts);
@@ -46,9 +47,7 @@ const Filter = () => {
           {products.length && products[0].badges && <ProductRow>Keurmerk</ProductRow>}
           {products.length &&
             products[0]?.features.length &&
-            products[0]?.features.map((feature) => (
-              <ProductRow isHighLighted={feature.isHighLighted}>{feature.title}</ProductRow>
-            ))}
+            products[0]?.features.map((feature) => <ProductFeatureTitle feature={feature} />)}
         </Space>
       </FilterItemBottom>
     </FilterWrapper>

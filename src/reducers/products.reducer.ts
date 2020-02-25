@@ -40,7 +40,6 @@ const loadProducts = (products: IProductServer[]) => {
           id: feature,
           value: featuresObj[feature],
           title: feature,
-          isHighLighted: false,
         });
       });
     return { ...product, id: uuidv4(), isHide: false, badges: badgesArr, features };

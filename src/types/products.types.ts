@@ -69,7 +69,6 @@ export interface IFeature {
   id: string;
   value: string;
   title: string;
-  isHighLighted;
 }
 
 export interface IPoductId {

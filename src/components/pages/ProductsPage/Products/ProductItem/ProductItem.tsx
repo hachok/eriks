@@ -12,6 +12,7 @@ import Text from 'src/components/shared/Text/Text';
 import Space from 'src/components/shared/Space/Space';
 import { Separator } from 'src/components/App.styled';
 import ProductBadges from 'src/components/pages/ProductsPage/Products/ProductItem/ProductBadges/ProductBadges';
+import ProductFeature from 'src/components/pages/ProductsPage/Products/ProductItem/ProductFeature/ProductFeature';
 
 interface Props {
   product: IProduct;
@@ -46,9 +47,7 @@ const ProductItem = ({ product }: Props) => {
           </ProductRow>
         )}
         {product.features &&
-          product.features.map((feature) => (
-            <ProductRow isHighLighted={feature.isHighLighted}>{feature.value}</ProductRow>
-          ))}
+          product.features.map((feature) => <ProductFeature feature={feature} />)}
       </ProductItemBottom>
     </ProductItemWrapper>
   );

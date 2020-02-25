@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getProducts } from 'src/selectors/products.selectors';
+import { useDispatch } from 'react-redux';
 import * as productsActions from 'src/actions/products.actions';
 import Text from 'src/components/shared/Text/Text';
 import Sidebar from 'src/components/pages/ProductsPage/Sidebar/Sidebar';
@@ -10,7 +9,6 @@ import Products from 'src/components/pages/ProductsPage/Products/Products';
 
 const ProductsPage = () => {
   const dispatch = useDispatch();
-  const products = useSelector(getProducts);
 
   useEffect(() => {
     dispatch(productsActions.loadProductsAsync.request());
@@ -27,7 +25,7 @@ const ProductsPage = () => {
       </header>
       <Container>
         <Sidebar />
-        <Products products={products} />
+        <Products />
       </Container>
     </Fragment>
   );
