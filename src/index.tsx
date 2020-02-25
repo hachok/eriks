@@ -9,6 +9,8 @@ import store, { sagaMiddleware } from 'src/store';
 import { rootSaga } from 'src/sagas';
 import { ThemeProvider } from 'src/styles';
 import { theme } from 'src/styles/theme';
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
 
 // then run the saga
 sagaMiddleware.run(rootSaga);
