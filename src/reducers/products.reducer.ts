@@ -47,12 +47,14 @@ const loadProducts = (products: IProductServer[]) => {
 };
 
 const toggleProduct = (id: string, state) => {
-  return state.map((product) => {
-    if (product.id === id) {
-      return { ...product, display: !product.display };
-    }
-    return product;
-  });
+  return [
+    ...state.map((product) => {
+      if (product.id === id) {
+        return { ...product, display: !product.display };
+      }
+      return product;
+    }),
+  ];
 };
 
 const removeProduct = (id: string, state) => {
