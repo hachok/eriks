@@ -1,4 +1,5 @@
 import styled from 'src/styles';
+import BucketIcon from 'src/components/shared/icons/BucketIcon/BucketIcon';
 
 interface ProductRowProps {
   isHighLighted?: boolean;
@@ -8,6 +9,7 @@ export const ProductItemWrapper = styled.div`
   flex: 0 0 24%;
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 export const ProductImage = styled.img`
@@ -36,4 +38,11 @@ export const ProductItemTop = styled.div`
 
 export const ProductItemBottom = styled.div`
   flex: 0 0 auto;
+`;
+
+export const BucketIconWrapper = styled(BucketIcon)`
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
 `;
