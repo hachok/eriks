@@ -10,7 +10,7 @@ export const SidebarWrapper = styled.aside`
   flex-direction: column;
   min-width: 220px;
 
-  ${useMediaQuery.to(DeviceTypes.mobile)`
+  ${useMediaQuery.to(DeviceTypes.tablet)`
     width: 150px;
   `}
 `;
