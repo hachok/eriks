@@ -8,3 +8,5 @@ export const loadProductsAsync = createAsyncAction(
 )<undefined, IProductResponse, undefined>();
 
 export const toggleProduct = createAction('TOGGLE_PRODUCT')<IPoductId>();
+
+export const removeProduct = createAction('REMOVE_PRODUCT')<IPoductId>();

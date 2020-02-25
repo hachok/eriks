@@ -7,7 +7,7 @@ export const getProducts = (state: IRootState): IProduct[] => state.products;
 export const isHighLighted = (featureId: string) =>
   createSelector(getProducts, (products) => {
     let highlighted = false;
-    if (products.length) {
+    if (!!products.length) {
       let value = '';
       products
         .filter((p) => p.display)

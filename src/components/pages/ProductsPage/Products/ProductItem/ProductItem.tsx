@@ -13,16 +13,24 @@ import Space from 'src/components/shared/Space/Space';
 import { Separator } from 'src/components/App.styled';
 import ProductBadges from 'src/components/pages/ProductsPage/Products/ProductItem/ProductBadges/ProductBadges';
 import ProductFeature from 'src/components/pages/ProductsPage/Products/ProductItem/ProductFeature/ProductFeature';
+import BucketIcon from 'src/components/shared/icons/BucketIcon/BucketIcon';
+import { useDispatch } from 'react-redux';
+import { removeProduct } from 'src/actions/products.actions';
 
 interface Props {
   product: IProduct;
 }
 
 const ProductItem = ({ product }: Props) => {
+  const dispatch = useDispatch();
+  const onBucketClick = () => {
+    dispatch(removeProduct({ id: product.id }));
+  };
   return (
     <ProductItemWrapper>
       <ProductItemTop>
         <Space pr={1} pl={1}>
+          <BucketIcon onClick={onBucketClick} />
           <ProductImageWrapper>
             <ProductImage src={product.productImage} />
           </ProductImageWrapper>

@@ -11,7 +11,7 @@ interface Props {
 const ProductBadges = ({ badges }: Props) => {
   return (
     <ProductBadgesWrapper>
-      {badges.length && badges.map((badge) => <ProductBadgesImage key={badge} src={badge} />)}
+      {!!badges.length && badges.map((badge) => <ProductBadgesImage key={badge} src={badge} />)}
     </ProductBadgesWrapper>
   );
 };

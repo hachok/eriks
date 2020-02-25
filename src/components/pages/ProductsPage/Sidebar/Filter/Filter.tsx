@@ -44,9 +44,9 @@ const Filter = () => {
       </FilterItemTop>
       <FilterItemBottom>
         <Space mt={2}>
-          {products.length && products[0].badges && <ProductRow>Keurmerk</ProductRow>}
-          {products.length &&
-            products[0]?.features.length &&
+          {!!products.length && products[0].badges && <ProductRow>Keurmerk</ProductRow>}
+          {!!products.length &&
+            !!products[0]?.features.length &&
             products[0]?.features.map((feature) => <ProductFeatureTitle feature={feature} />)}
         </Space>
       </FilterItemBottom>

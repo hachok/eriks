@@ -55,12 +55,18 @@ const toggleProduct = (id: string, state) => {
   });
 };
 
+const removeProduct = (id: string, state) => {
+  return [...state.filter((product) => product.id !== id)];
+};
+
 export const productsReducer = (state = initialState, action: Action): IProduct[] => {
   switch (action.type) {
     case getType(productsActions.loadProductsAsync.success):
       return loadProducts(action.payload.products);
     case getType(productsActions.toggleProduct):
       return toggleProduct(action.payload.id, state);
+    case getType(productsActions.removeProduct):
+      return removeProduct(action.payload.id, state);
     default:
       return state;
   }
