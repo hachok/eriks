@@ -11,7 +11,7 @@ https://eriks-digital.herokuapp.com/
 In the project directory, you can run:
 
 - `yarn install` - install dependencies
-- `cp .env.example .env` - create .env file with env variables
+- `cp .env.sample .env` - create .env file with env variables
 - `yarn start` - run app
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
