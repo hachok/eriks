@@ -5,6 +5,7 @@ import {
   FilterItemBottom,
   FilterItemTop,
   FilterRow,
+  FilterRowItem,
   FilterWrapper,
 } from 'src/components/pages/ProductsPage/Sidebar/Filter/Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
@@ -33,11 +34,11 @@ const Filter = () => {
                   onChange={() => onCheckboxChange(product.id)}
                   checked={product.display}
                 />
-                <Space ml={1}>
+                <FilterRowItem ml={1}>
                   <Text size="xs" fontWeight="600">
                     {product.name}
                   </Text>
-                </Space>
+                </FilterRowItem>
               </FilterRow>
             ))}
         </Space>

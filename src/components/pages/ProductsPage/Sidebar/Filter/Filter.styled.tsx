@@ -1,4 +1,5 @@
 import styled from 'src/styles';
+import Space from 'src/components/shared/Space/Space';
 
 export const FilterRow = styled.div`
   display: flex;
@@ -19,4 +20,8 @@ export const FilterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
+`;
+
+export const FilterRowItem = styled(Space)`
+  width: 100%;
 `;

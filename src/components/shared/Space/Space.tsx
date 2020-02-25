@@ -5,6 +5,7 @@ import styled from 'src/styles';
 
 type ComponentProps = Partial<{ [K in SpaceTitles]: SpaceSizes }> & {
   tag?: BlockTypes;
+  className?: string;
   [key: string]: any;
 };
 

@@ -1,4 +1,6 @@
 import styled from 'src/styles';
+import { DeviceTypes } from 'src/types/styles.types';
+import { useMediaQuery } from 'src/utils/media';
 
 export const SidebarWrapper = styled.aside`
   flex: 0 0 20%;
@@ -7,4 +9,8 @@ export const SidebarWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   min-width: 220px;
+
+  ${useMediaQuery.to(DeviceTypes.mobile)`
+    width: 150px;
+  `}
 `;
