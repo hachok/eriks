@@ -1,6 +1,6 @@
 ## Eriks
 
-The compare page with the possibility to show/hide, remove the product.
+The compare page with the possibility to show/hide, remove products.
 
 ## Installation
 
