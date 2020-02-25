@@ -27,6 +27,10 @@ export const ProductRow = styled.div<ProductRowProps>`
   border-bottom: 1px solid ${(props) => props.theme.colors.lightGrey};
   ${(props) => props.isHighLighted && `background: ${props.theme.colors.lightGrey};`}
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   &:last-child {
     border-bottom: none;
   }

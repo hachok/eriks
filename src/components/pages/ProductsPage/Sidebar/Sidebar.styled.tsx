@@ -8,7 +8,7 @@ export const SidebarWrapper = styled.aside`
   padding: ${(props) => `${props.theme.space[4]} 0 0`};
   display: flex;
   flex-direction: column;
-  min-width: 220px;
+  width: 220px;
 
   ${useMediaQuery.to(DeviceTypes.tablet)`
     width: 150px;

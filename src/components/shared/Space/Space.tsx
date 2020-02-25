@@ -9,7 +9,7 @@ type ComponentProps = Partial<{ [K in SpaceTitles]: SpaceSizes }> & {
   [key: string]: any;
 };
 
-const Space: FunctionComponent<ComponentProps> = ({ children, tag, ...props }) => {
+const Space: FunctionComponent<ComponentProps> = ({ children, tag, className, ...props }) => {
   for (const key of Object.keys(props)) {
     props[key] = props[key] * SIZE_NUMBER;
   }
@@ -32,7 +32,11 @@ const Space: FunctionComponent<ComponentProps> = ({ children, tag, ...props }) =
     `};
   `;
 
-  return <Wrapper {...props}>{children}</Wrapper>;
+  return (
+    <Wrapper className={className} {...props}>
+      {children}
+    </Wrapper>
+  );
 };
 
 Space.defaultProps = {
