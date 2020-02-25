@@ -15,6 +15,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Commands
 
 - `yarn build` - builds the app for production to the build folder.
+- `yarn start` - run app
+- `yarn prettier` - run prettier for code formatting
+- `yarn tslint:fix` - fix tslint
+- `yarn pre-commit` - pre-commit hook with tslint and prettier
 
 ## Structure
 
