@@ -55,7 +55,7 @@ const ProductItem = ({ product }: Props) => {
           </ProductRow>
         )}
         {product.features &&
-          product.features.map((feature) => <ProductFeature feature={feature} />)}
+          product.features.map((feature) => <ProductFeature key={feature.id} feature={feature} />)}
       </ProductItemBottom>
     </ProductItemWrapper>
   );

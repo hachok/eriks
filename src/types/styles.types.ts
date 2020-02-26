@@ -36,13 +36,7 @@ export enum DeviceTypes {
 
 export type FontsType = 'Geomanist' | 'CircularStd' | 'SF-Pro-Display' | 'Roboto';
 
-export type IconType = 'shop';
-
 export type FontsStyle = 'normal' | 'italic';
-
-export type TextTypes = 'a' | 'p' | 'b' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-
-export type BlockTypes = 'span' | 'div';
 
 export type SpaceTitles = 'p' | 'pt' | 'pb' | 'pl' | 'pr' | 'm' | 'mt' | 'mb' | 'ml' | 'mr';
 

@@ -48,7 +48,9 @@ const Filter = () => {
           {!!products.length && products[0].badges && <ProductRow>Keurmerk</ProductRow>}
           {!!products.length &&
             !!products[0]?.features.length &&
-            products[0]?.features.map((feature) => <ProductFeatureTitle feature={feature} />)}
+            products[0]?.features.map((feature) => (
+              <ProductFeatureTitle key={feature.id} feature={feature} />
+            ))}
         </Space>
       </FilterItemBottom>
     </FilterWrapper>

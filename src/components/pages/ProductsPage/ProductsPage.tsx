@@ -18,7 +18,7 @@ const ProductsPage = () => {
     <Fragment>
       <header>
         <Space pt={2} pb={2} pl={1}>
-          <Text tag="h2" color="blue" fontWeight="600" size="l">
+          <Text color="blue" fontWeight="600" size="l">
             4 producten vergelijken
           </Text>
         </Space>
